@@ -22,6 +22,7 @@
     margin: 0;
     display: flex;
     gap: 20px;
+    font-family: 'Monaco', sans-serif;
 }
 
 /* Position the parent li*/

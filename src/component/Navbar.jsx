@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ contactRef }) => {
     const [menu, setMenu] = useState("home");
-    const [showSocials, setShowSocials] = useState(false); // Visibility of the socials dropdown
+    const [showSocials, setShowSocials] = useState(false);
 
-    // Socials list
+    // Function to scroll to the contact section
+    const scrollContact = () => {
+        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     const socialList = [
         { name: "LinkedIn", url: "https://www.linkedin.com/in/ina-youn-b7553a274/" },
         { name: "Github", url: "https://github.com/Inaaaaaaaaaa" },
@@ -13,10 +17,12 @@ const Navbar = () => {
 
     return (
         <div className="Background">
-             <ul className="navbar-menu">
+            <ul className="navbar-menu">
                 <li onClick={() => setMenu("home")}>Home</li>
                 <li onClick={() => setMenu("aboutme")}>About me</li>
                 <li onClick={() => setMenu("projects")}>Projects</li>
+                <li onClick={() => { setMenu("contact"); scrollContact(); }}>Contact me</li>
+
                 <li onClick={() => {
                     setShowSocials(!showSocials);
                     setMenu("socials");
@@ -33,8 +39,7 @@ const Navbar = () => {
                         </ul>
                     )}
                 </li>
-                <li onClick={() => setMenu("contact")}>Contact form</li>
-             </ul>
+            </ul>
         </div>
     );
 };
