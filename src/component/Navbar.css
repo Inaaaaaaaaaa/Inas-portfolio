@@ -1,0 +1,6 @@
+.Background /*Background colour*/
+{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(#EE9CA7, #FFDDE1); /*Pink gradient*/
+}
