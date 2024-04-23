@@ -3,4 +3,58 @@
     margin: 0;
     height: 100vh;
     background: linear-gradient(#EE9CA7, #FFDDE1); /*Pink gradient*/
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.Background .active
+{
+    padding-bottom: 2px;
+}
+
+.navbar-menu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Position the parent li*/
+.navbar-menu > li {
+    position: relative; 
+    cursor: pointer;
+    padding-bottom: 5px;
+    transition: border-bottom 0.3s;
+}
+
+/* Style for the dropdown */
+.socials-dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%; 
+    min-width: 100%; 
+    z-index: 1000; /* Ensures the dropdown appears above other content */
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Remove bullet points */
+}
+
+/* Style for the dropdown items to be displayed inline */
+.socials-dropdown li {
+    display: inline-block; 
+    margin-right: 10px; 
+}
+
+
+.navbar-menu > li:hover:not(.no-underline) {
+    border-bottom: 3px solid #49557e;
+}
+
+.navbar-menu > li.no-underline {
+    border-bottom: none;
 }
