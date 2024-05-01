@@ -2,7 +2,7 @@
 {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(#EE9CA7, #FFDDE1); /*Pink gradient*/
+    background: url('background.jpg') center/cover; 
     padding: 0;
     display: flex;
     gap: 20px;
@@ -23,6 +23,8 @@
     display: flex;
     gap: 20px;
     font-family: 'Monaco', sans-serif;
+    color: aliceblue;
+    font-size: 20px;
 }
 
 /* Position the parent li*/
